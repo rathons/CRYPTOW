@@ -1,0 +1,29 @@
+{
+  "name": "cryptow",
+  "version": "1.0.0",
+  "description": "Crypto Tracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rathons/CRYPTOW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rathons/CRYPTOW/issues"
+  },
+  "homepage": "https://github.com/rathons/CRYPTOW#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
