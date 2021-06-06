@@ -24,7 +24,7 @@ exports.protect = async (req, res, next) => {
         next();        
         res.status(200).json({
           sucess: true,
-          data:`Hello ${user.username}`
+          data:user.username
       });
       } catch (err) {
         console.log(`Error ${err}`)

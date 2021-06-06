@@ -1,0 +1,11 @@
+.coinlist-image {
+    width: 50px;
+  }
+
+  .coinlist-item {
+    display: flex;
+  }
+
+  .coin-price {
+    text-decoration: none !important;
+  }
