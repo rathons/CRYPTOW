@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom';
 import "./ForgotPassPage.css";
 
 const ForgotPassPage = () => {
@@ -39,13 +40,12 @@ const ForgotPassPage = () => {
         onSubmit={forgotPasswordHandler}
         className="forgotpassword-screen__form"
       >
-        <h3 className="forgotpassword-screen__title">Forgot Password</h3>
+        <h3 className="forgotpassword-screen__title">Trouble Logging In?</h3>
         {error && <span className="error-message">{error}</span>}
         {success && <span className="success-message">{success}</span>}
         <div className="form-group">
           <p className="forgotpassword-screen__subtext">
-            Please enter the email address you register your account with. We
-            will send you reset password confirmation to this email
+          Enter your email and we'll send you a link to get back into your account.
           </p>
           <label htmlFor="email">Email:</label>
           <input
@@ -60,7 +60,11 @@ const ForgotPassPage = () => {
         <button type="submit" className="btn btn-primary">
           Send Email
         </button>
+        <div className="text-center">        
+        <span class="link-primary"><Link to="/signin">Back to Sign In</Link></span>
+      </div>
       </form>
+      
     </div>
   );
 };

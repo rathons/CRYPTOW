@@ -70,7 +70,7 @@ const CoinDetailsPage = () => {
         setIsLoading(false);
       };
       fetchData();
-    }, []);
+    }, [id]);
 
     //Component
     const renderData = () => { 
