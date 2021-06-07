@@ -13,7 +13,7 @@ const PrivatePage = ({history}) => {
 
     const fetchPrivateData = async () => {
       const config = {
-        headers:{
+        header:{
           "Content-Type": "application/json",
           Authorization: `Token ${localStorage.getItem("authToken")}`
         }

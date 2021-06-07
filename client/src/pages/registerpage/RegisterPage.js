@@ -16,7 +16,7 @@ const RegisterPage = ({history}) => {
         e.preventDefault();
 
         const config ={
-            headers: {"Content-Type": "apllication/json"}
+            header: {"Content-Type": "application/json"}
         }
 
         if(password !== confirmedPassword) {
@@ -48,29 +48,29 @@ const RegisterPage = ({history}) => {
             <h3 className="register-form-title">Register</h3>
             {error && <span className="error-message">{error}</span>}
             <div className="form-group">
-                <label htmlFor="name">Username:</label>
-                <input type="text" required id="name" placeholder="Enter Username" value={username} 
-                onChange={(props) => setUsername(props.currentTarget.value)}/>
+                <label htmlFor="name">Full Name:</label>
+                <input type="text" required id="name" placeholder="Enter your name" value={username} 
+                onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <div className="form-group">
                 <label htmlFor="email">Email:</label>
                 <input type="text" required id="email" placeholder="Enter Email" value={email} 
-                onChange={(props) => setEmail(props.currentTarget.value)}/>
+                onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div className="form-group">
                 <label htmlFor="number">Phone:</label>
-                <input type="number" required id="phone" placeholder="Enter Phone Number" value={phone} 
-                onChange={(props) => setPhone(props.currentTarget.value)}/>
+                <input type="tel" required id="phone" placeholder="Enter Phone Number" value={phone} 
+                onChange={(e) => setPhone(e.target.value)}/>
             </div>
             <div className="form-group">
                 <label htmlFor="password">Password:</label>
                 <input type="password" required id="password" placeholder="Enter your Password" value={password} 
-                onChange={(props) => setPassword(props.currentTarget.value)}/>
+                onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <div className="form-group">
                 <label htmlFor="confirmedpassword">Confirm Password:</label>
                 <input type="password" required id="confirmedpassword" placeholder="Confirm your Password" value={confirmedPassword} 
-                onChange={(props) => setConfirmedPassword(props.currentTarget.value)}/>
+                onChange={(e) => setConfirmedPassword(e.target.value)}/>
             </div>
             <button type="submit" className="btn btn-primary">Register</button>
             <span className="register-page-subtext">Already have an account? <Link to="/signin">Login</Link></span>

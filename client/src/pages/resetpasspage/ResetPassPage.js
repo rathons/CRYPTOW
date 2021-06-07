@@ -14,7 +14,7 @@ const ResetPassPage = ({ match }) => {
     e.preventDefault();
 
     const config = {
-      headers: {
+      header: {
         "Content-Type": "application/json",
       },
     };
@@ -30,7 +30,7 @@ const ResetPassPage = ({ match }) => {
 
     try {
       const { data } = await axios.put(
-        `//resetpass/${match.params.resetToken}`,
+        `/api/auth/resetpass/${match.params.resetToken}`,
         {
           password,
         },
@@ -55,7 +55,7 @@ const ResetPassPage = ({ match }) => {
         {error && <span className="error-message">{error} </span>}
         {success && (
           <span className="success-message">
-            {success} <Link to="/login">Login</Link>
+            {success} <Link to="/signin">Signin</Link>
           </span>
         )}
         <div className="form-group">

@@ -12,7 +12,7 @@ const ForgotPassPage = () => {
     e.preventDefault();
 
     const config = {
-      headers: {
+      header: {
         "Content-Type": "application/json",
       },
     };
@@ -61,7 +61,7 @@ const ForgotPassPage = () => {
           Send Email
         </button>
         <div className="text-center">        
-        <span class="link-primary"><Link to="/signin">Back to Sign In</Link></span>
+        <span className="link-primary"><Link to="/signin">Back to Sign In</Link></span>
       </div>
       </form>
       
